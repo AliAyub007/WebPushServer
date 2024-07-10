@@ -9,6 +9,10 @@ const port = 8800;
 
 app.use(express.json());
 
+app.get("/v1/pushPackages/test", (request, response) => {
+  response.send("Hello World!");
+});
+
 app.post("/v1/pushPackages/web.com.imagine.art", (request, response) => {
   // return the push package
   response.set("Content-Type", "application/zip");
